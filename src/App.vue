@@ -1,10 +1,19 @@
 <template>
-  <h3>Title</h3>
-  <p>Anons</p>
+  <h3>{{ info }}</h3>
+  <p>{{ someInfo }}</p>
+
+  <button type="button" @click="this.info = 'Some new '">Отправить</button>
 </template>
 
 <script>
-
+export default {
+  data(){
+    return{
+      info: 'Title!',
+      someInfo: 'Anons some message'
+    }
+  }
+}
 </script>
 
 <style>
