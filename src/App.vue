@@ -22,6 +22,7 @@ export default {
   }
 
   p{
-    color: red;
+    color: pink;
+    font-size: 30px;
   }
 </style>
