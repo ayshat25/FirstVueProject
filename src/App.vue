@@ -17,4 +17,8 @@ export default {
 
 <style>
 
+  p{
+    color: pink;
+    font-size: 30px;
+  }
 </style>
