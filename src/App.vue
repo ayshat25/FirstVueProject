@@ -10,7 +10,7 @@ export default {
   data(){
     return{
       info: 'Title!',
-      someInfo: 'Anons some message'
+      someInfo: 'Something new'
     }
   }
 }
