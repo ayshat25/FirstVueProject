@@ -50,7 +50,7 @@ const deleteApp = (id) => {
 <style scoped>
  
 ul > li {
- 
+ /*help*/
   list-style: none;
 }
 </style>
