@@ -1,56 +1,32 @@
 <template>
-  <from @submit.prevent="AddToCard">
-    <label>Текст</label>
-    <input  
-      type="text" 
-      v-model="msg"
-      placeholder="Введите текст"/>
-    <input 
-      type="submit"
-      @click="AddToCard"
-      >
-  </from>
- 
-  <ul>
-    <li v-if="items.length === 0">Тут нечего нет</li>
-    <li 
-      v-for="item in items" 
-      :key="item.id">
-        {{ item.msg}}
-      <button @click="deleteApp(item.id)">Удалить</button>  
-      </li>
-  </ul>
+  <input type="text" v-model="userName" placeholder="Имя">
+  <input type="password" v-model="userPass" placeholder="Пароль">
+  <input type="email" v-model="userEmail" placeholder="Email">
+  <button @click="sendData()">Отправить</button>
 </template>
  
-<script setup>
-import { ref } from 'vue'
- 
-const msg = ref('');
-const items = ref([])
- 
-const AddToCard = () => {
-  if(msg.value.trim() === '') {
-    alert("Введите текст")
-    return
+<script>
+  export default {
+    data(){
+      return{
+        users: [],
+        userName: '',
+        userPass: '',
+        userEmail: ''
+      }
+    },
+    methods: {
+      sendData(){
+        this.users.push({
+          name: this.userName,
+          pass: this.userPass,
+          email: this.userEmail
+        })
+      }
+    }
   }
- 
-  items.value.push({
-    id: Date.now(),
-    msg: msg.value.trim()
-  })
- 
-  msg.value = ''
-}
- 
-const deleteApp = (id) => {
-  items.value = items.value.filter(item => item.id !== id)
-}
 </script>
  
 <style scoped>
- 
-ul > li {
- /*help*/
-  list-style: none;
-}
+
 </style>
