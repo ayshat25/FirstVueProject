@@ -51,6 +51,6 @@ const deleteApp = (id) => {
  
 ul > li {
  
-  list-style: none;
+  /* list-style: none; */
 }
 </style>
