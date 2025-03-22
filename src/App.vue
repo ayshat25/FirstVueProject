@@ -10,7 +10,7 @@
     data(){
       return{
         users: [],
-        userName: '',
+        userName: 'йцйцй',
         userPass: '',
         userEmail: ''
       }
